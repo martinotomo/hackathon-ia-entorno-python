@@ -1,0 +1,37 @@
+# Normaliza saltos de línea: LF en el repositorio y en el working tree
+* text=auto eol=lf
+
+# Scripts de Windows necesitan CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Scripts de shell y Docker SIEMPRE LF (CRLF rompe "#!/bin/bash\r")
+*.sh text eol=lf
+Dockerfile text eol=lf
+*.dockerfile text eol=lf
+docker-compose*.yml text eol=lf
+Makefile text eol=lf
+
+# Código y texto
+*.py text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ipynb text eol=lf
+
+# Binarios (nunca tocar)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.zip binary
+*.pt binary
+*.pth binary
+*.onnx binary
+*.pkl binary
+*.parquet binary
