@@ -6,9 +6,9 @@ services:
         UID: ${UID:-1000}
         GID: ${GID:-1000}
     ports:
-      - "8888:8888"   # JupyterLab
-      - "8000:8000"   # FastAPI
-      - "8501:8501"   # Streamlit
+      - "127.0.0.1:8888:8888"   # JupyterLab (sin token: solo localhost)
+      - "127.0.0.1:8000:8000"   # FastAPI
+      - "127.0.0.1:8501:8501"   # Streamlit
     volumes:
       - .:/app
     env_file:
